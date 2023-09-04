@@ -1,0 +1,71 @@
+@import '../../styles/global-ui.css';
+.register-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.register-container .register-wrapper {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #fbfbfb;
+  border-radius: 10px;
+  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.2 );
+  text-align: center;
+  margin: 0;
+
+}
+
+.register-container .register-wrapper h2 {
+  align-items: center;
+  padding: 0 10px 10px 10px;
+  margin: 10px 0px;
+}
+
+.register-container .register-wrapper .register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container .register-wrapper .register-form .name-form {
+  display: flex;
+  
+}
+
+.register-container .register-wrapper .register-form .other-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container .register-wrapper .register-form input[type="text"] {
+  margin-bottom: 10px;
+  background-color: #fbfbfb;
+  font-size: 16px;
+}
+
+.register-container .register-wrapper .register-form .btn-register {
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+
+.register-container .register-wrapper .register-form .name-form input {
+  width: calc(50% - 5px);
+}
+
+/* .register-container .register-wrapper .register-form .name-form input[type="text"]:first-child {
+  margin-right: 34px;
+} */
+
+/* .other-form input[type="text"]:first-child {
+  margin-right: 20px;
+} */

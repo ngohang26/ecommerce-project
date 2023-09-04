@@ -1,0 +1,99 @@
+.dataTable .dataGrid {
+  background: white;
+  padding:20px;
+}
+
+.dataTable .dataGrid .MuiDataGrid-toolbarContainer {
+  flex-direction: row-reverse;
+  padding: 5 60px;
+
+}
+
+.dataTable .dataGrid img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dataTable .dataGrid .action {
+  display: flex;
+  gap: 15px;
+}
+
+.dataTable .dataGrid .action img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.ReactModal__Content {
+  width: 400px;
+  height: 160px;
+  margin: auto;
+  padding: 0 !important;
+  border-radius: 10px !important;
+  border: 1px solid #fbfbfb !important;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.08);
+}
+
+
+.ReactModal__Content h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.ReactModal__Content p {
+  padding: 10px;
+  margin-bottom: 2px;
+  font-size: 16px;
+}
+
+/* Style for modal buttons */
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2.5rem;
+  margin-top: 10px;
+
+}
+
+.modalButtons button {
+  margin-left: 20px;
+  border: none;
+  width: 6rem;
+  height: 2.5rem;
+  border-radius: 5px;
+
+}
+
+
+.undoSnackbar {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+
+}
+
+.undoSnackbar button {
+  background-color: #fbfbfb;
+  border: none;
+  color: #0c7cbc;
+  border-bottom: 1px solid #0c7cbc;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.undoSnackbar p {
+  margin:0 20px 0px 0px;
+  
+}

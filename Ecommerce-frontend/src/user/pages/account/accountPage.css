@@ -1,0 +1,24 @@
+
+.account-container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 14rem;
+  background-color: #fafafa;
+}
+ul {
+  list-style-type: none;
+}
+
+.account-container button {
+  border: none;
+  background-color: #fafafa;
+  width: 18px;
+  height: 40px;
+  white-space: nowrap;
+  
+}
+
+.icon-profile {
+  background-color: none;
+  font-size: 22px;
+}

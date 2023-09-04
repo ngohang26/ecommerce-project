@@ -1,0 +1,37 @@
+@import '../../styles/global.css';
+.topBox h1 {
+    margin-bottom: 20px;
+}
+
+.topBox .list .listItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.topBox .list .listItem .user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.topBox .list .listItem .user .userTexts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.topBox .list .listItem .user .userTexts .username {
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.email {
+    font-size: 12px;
+}
+
+.topBox .list .listItem .amount {
+    font-weight: 550;
+}

@@ -1,0 +1,255 @@
+.product-container {
+  padding: 48px 0px;
+}
+
+.product-container .product-tabs {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.product-container .product-tabs .product-title {
+  text-align: left;
+  font-size: 30px;
+  font-family:"Nunito", sans-serif;
+}
+
+.product-tabs .nav-tabs {
+  text-align: right;
+  justify-content: flex-end;
+  
+}
+
+.product-tabs .nav-tabs .nav-link {
+  font-family:"Nunito", sans-serif;
+  font-size: 15px;
+  border: none;
+  color: #555;
+  background: none;
+  padding: 16px 16px;
+  font-weight: 540;
+}
+
+.product-tabs .nav-tabs .nav-link:hover {
+  color: #111;
+  border-color: transparent;
+}
+
+.product-tabs .nav-tabs .nav-link.active {
+  border-bottom: 3px solid #ffc43f;
+  color: #111;
+}
+
+.layout {
+  display: flex;
+
+}
+
+.layout .product-grid {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.layout .product-item {
+    position: relative;
+    padding: 16px;
+    background: #FFFFFF;
+    border: 1px solid #FBFBFB;
+    box-shadow: 0px 5px 22px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-out;
+    z-index: 1;
+}
+.product-item:hover {
+    box-shadow: 0px 21px 44px rgba(0, 0, 0, 0.08);
+  }
+  
+.layout .product-item .product-image {
+  background: #F9F9F9;
+  border-radius: 12px;
+  text-align: center;
+}
+.layout .product-item .product-image img {
+  max-height: 200px;
+  height: auto;
+
+}
+
+.product-item h3 {
+display: block;
+width: 100%;
+font-weight: 600;
+font-size: 18px;
+line-height: 25px;
+text-transform: capitalize;
+color: #333333;
+margin: 0;
+}
+
+.product-item p {
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  text-transform: capitalize;
+  color: #222222;
+}
+
+.layout .product-grid .product-item .heart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    transition: all 0.3s ease-out;
+}
+.layout .product-grid .product-item .heart:hover {
+    background-color: rgb(240, 56, 56);
+    color: #fff;
+}
+
+.layout .product-grid button {
+  border: none;
+  display: flex;
+  position: right;
+  justify-content: space-between;
+
+}
+
+.product-item .quantity-selector {
+  /* Thêm các thuộc tính CSS cho phần hiển thị tăng/giảm số lượng */
+  display: flex;
+  align-items: center;
+}
+
+.product-item .quantity-selector button {
+  /* Thêm các thuộc tính CSS cho nút tăng/giảm số lượng */
+  width: 26px;
+  height: 26px;
+  line-height: 1;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  border-radius: 6px;
+  color: #222;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 1000;
+}
+
+.product-item .quantity-selector button:hover {
+  background-color: #ffc43f;
+}
+
+.product-item .quantity-selector input {
+  /* Thêm các thuộc tính CSS cho input hiển thị số lượng */
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  color: #555;
+  padding-left: 10px;
+}
+.product-item .product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-item .product-info .price-quantity {
+  display: flex;
+  justify-content: space-between; 
+
+}
+
+.product-item .product-info .price-quantity .price {
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  text-transform: capitalize;
+  color: #222222;
+}
+
+.product-item .product-info .sold-add-to-cart {
+  display: flex;
+  justify-content: space-between;
+  font-family:"Nunito", sans-serif;
+  margin-top: 10px;
+}
+
+.product-item .product-info .sold-add-to-cart .sold {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #9D9D9D;
+}
+
+.product-item .product-info .sold-add-to-cart .btn-add-cart {
+  text-decoration: none;
+  background: none;
+  color: #555;
+  font-size: 17px;
+  font-weight: 600;
+  font-family:"Nunito", sans-serif;
+  cursor: pointer;
+}
+
+.product-item h3 {
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #333333;
+  margin: 10px 10px 4px 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;  /*xoa mac dinh tao dau cham trong li (the tu dong trong page)*/
+}
+
+.pagination .bx {
+  font-size: 40px;
+  border-radius: 10px;
+  background: #F1F1F1;
+  color: #222222;
+  margin: 0 24px;
+
+}
+
+/* .pagination li {
+  margin: 0 20px;
+} */
+
+.pagination .page-number {
+  color: #111; /*no*/
+  display:flex;
+  justify-content: center;  
+  align-items: center;
+  font-size: 18px;
+  min-width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.pagination .active{
+  background-color: #ffc43f;
+
+}

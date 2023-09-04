@@ -1,0 +1,46 @@
+:root {
+
+  --header-height       : 160px;
+  --header-height-min   : 80px;
+}
+
+/* Theme Colors */
+:root {
+  --accent-color       : #FFC43F;
+  --dark-color         : #222222;
+  --light-dark-color   : #727272;
+  --light-color        : #fff;
+  --grey-color         : #dbdbdb;
+  --light-grey-color   : #fafafa;
+  --primary-color      : #6995B1;
+  --light-primary-color   : #eef1f3;
+}
+
+/* Fonts */
+:root {
+  --body-font           : "Open Sans", sans-serif;
+  --heading-font        : "Nunito", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--heading-font);
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.btn-close-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-close {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: revert;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}

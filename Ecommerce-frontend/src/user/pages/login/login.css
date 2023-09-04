@@ -1,0 +1,100 @@
+@import '../../styles/global-ui.css';
+.login-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-container .login-wrapper {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #fbfbfb;
+  border-radius: 10px;
+  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.2 );
+  text-align: center;
+  margin: 0;
+
+}
+
+.login-container .login-wrapper h2 {
+  align-items: center;
+  padding: 0 10px 10px 10px;
+  margin: 10px 0px;
+}
+
+.login-container .login-wrapper .login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container .login-wrapper .login-form .input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container .login-wrapper .login-form input[type="text"] {
+  margin-bottom: 10px;
+  background-color: #fbfbfb;
+  font-size: 16px;
+}
+
+/* .login-container .login-wrapper .btn-close-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login-container .login-wrapper .btn-close-container .btn-close {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+} khôi phục giá trị mặc định */
+
+/* .login-container .login-wrapper .login-form label {
+  font-size: 14px;
+  font-family: var(--body-font);
+  font-weight: 800;
+  padding: 10px;
+} */
+
+
+.login-container .login-wrapper .login-form .btn-login {
+  background-color: rgb(20, 20, 20);
+  color: white;
+  margin-bottom: 10px;
+}
+
+.login-container .login-wrapper .login-form .checkbox-login {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 16px;
+  border: 0.8px;
+  padding: 6px 0 16px;
+}
+
+.login-container .login-wrapper .login-form .checkbox-login input[type="checkbox"]{
+  margin-right: 14px;
+  transform: scale(1.6);
+  margin-left: 2px;
+  color: #606770;
+}
+
+.login-container .login-wrapper .login-form .link-forgetpass {
+  font-size: 16px;
+  padding: 6px 0 16px;
+}

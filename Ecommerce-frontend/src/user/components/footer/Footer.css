@@ -1,0 +1,122 @@
+@import '../../styles/global-ui.css';
+.footer-container {
+  border-top: 4px solid #ffc43f;
+}
+.section-padding {
+  padding: 2rem 4rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.footer-link-item {
+  width: 230px;
+  margin: 0.7rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.footer-container .footer-link-item a {
+  color: #555;
+  text-decoration: none;
+  font-size: 17px;
+    
+}
+
+.footer-container .footer-link-item h4{
+  font-family: var(--heading-font);
+  font-size: 20px;
+  line-height: 37px;
+  margin-bottom: 0.9rem;
+  white-space: nowrap;
+}
+
+.footer-container .footer-link-item p {
+  font-size: 17px;
+  line-height: 30px;
+  margin: 0.5 rem 0;
+  cursor: pointer;
+}
+.payment-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  color: #747474;
+}
+
+.icon-follow {
+  display: flex;
+  flex-direction: row;
+  color: #747474;
+}
+
+.icon-follow .bx {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  border: 0.1px solid #e1e1e1;
+  border-radius: 5px;
+}
+.icon-contact {
+  display: flex;
+  flex-direction: column;
+}
+.footer-container.icon-contact a {
+  
+  padding-bottom: 10px;
+}
+.icon-contact .bx {
+  font-size: 24px;
+  font-weight: 100;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+.payment-options img {
+  width: 100%;
+  width: 48px;
+  height: 30px;
+  border: 1px solid #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
+}
+.footer-link-item form {
+  display: flex;
+  margin-top: 30px;
+}
+
+.footer-link-item input[type="email"] {
+  font-family: var(--body-font);
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.footer-link-item button[type="submit"] {
+  font-family: var(--body-font);
+  font-size: 14px;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+}

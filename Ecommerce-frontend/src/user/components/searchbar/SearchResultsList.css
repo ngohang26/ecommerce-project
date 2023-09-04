@@ -1,0 +1,14 @@
+.input-wrapper {
+  position: relative;
+}
+.results-list {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(110, 17, 172, 0.1);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}

@@ -1,0 +1,49 @@
+.brand-carousel {
+  padding: 48px 0px;
+}
+
+.brand-carousel .row-2 {
+  padding: 0 12px;
+}
+
+.brand-carousel .row-2 .brand-carousel-title {
+  text-align: left;
+  font-size: 30px;
+  font-family:"Nunito", sans-serif;
+}
+
+
+.brand-carousel .brand-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #FBFBFB;
+  transform: translate3d(0,-10px,0);
+  box-shadow: 0px 21px 44px rgba(0, 0, 0, 0.08);  border-radius: 16px;
+  padding: 16px;
+  margin: 0 16px;
+  }
+
+  .brand-carousel .brand-item .text {
+    color: #747474;
+    text-align: left;
+    margin-left: 30px;
+  }
+  
+  .brand-carousel .brand-item .text .text-brand {
+    font-size: 20px;
+  }
+
+  .brand-carousel .brand-item img {
+    width: 150px;
+    border-radius: 8px;
+  }
+  .brand-carousel .brand-item .text .title-brand {
+    font-family:"Nunito", sans-serif;
+    font-size: 18px;  
+    font-weight: 700;
+  }
+
+  

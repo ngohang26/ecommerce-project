@@ -1,0 +1,162 @@
+.banner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin: 12px;
+    background-image: url('../../assets/background-pattern.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem 0.4rem !important;
+}
+
+.banner .block-1,
+.banner .block-2,
+.banner .block-3 {
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner .block-1 {
+    grid-column: span 7;
+    grid-row: span 2;
+    padding: 2rem;
+    align-items: center;
+}
+
+.banner .block-2,
+.banner .block-3 {
+    align-items: end;
+}
+
+/* .banner .block-2 {
+    grid-column: span 5;
+    grid-row: span 1;
+} */
+
+.banner .block-2,
+.banner .block-3 {
+    grid-column: span 5;
+    grid-row: span 1;
+}
+
+.banner .ui.image {
+    width: 300px;
+    max-height: 400px;
+    position: inherit;
+}
+
+.banner .block-1 button {
+    font-size: 16px;
+    display: flex;
+    background: none;
+    color: #000000;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    width: 180px;
+    margin-top: 30px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.banner .block-1 button:hover {
+    background: #000;
+    color: #fff;
+
+}
+
+.banner .block-2 button,
+.banner .block-3 button {
+    display: flex;
+    align-items: center;
+    color: #555;
+    border: none;
+    background: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px
+}
+
+.banner .block-2 .text,
+.banner .block-3 .text {
+    padding: 48px 0 48px 48px;
+}
+
+.categories {
+    font-family: 'Garamond';
+    font-size: 37px;
+    text-transform: capitalize;
+    font-weight: 100;
+    text-align: left;
+}
+
+.banner .block-1 .categories {
+    color: #FFC43F
+}
+
+.banner .block-2 .categories,
+.banner .block-3 .categories {
+    color: #000000;
+}
+
+.banner .categories {
+    white-space: nowrap;
+}
+
+.banner-title {
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+}
+
+.banner .block-1 .banner-title {
+    font-size: 4vw
+}
+
+.banner p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1vw;
+    color: #555;
+    text-align: left;
+    letter-spacing: .02em
+}
+
+.banner .block-2 .banner-title,
+.banner .block-3 .banner-title {
+    font-size: 2vw
+}
+
+/* @media (max-width: 1200px) {
+    .banner {
+        grid-template-columns: repeat(10, 1fr);
+        grid-row: repeat(2, 1fr);
+    }
+
+    .banner .block-1 {
+        grid-column: span 6;
+        grid-row: span 2;
+    }
+
+    .banner .block-2,
+    .banner .block-3 {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+} */
+
+
+@media screen  and (max-width: 1024px) {
+    .banner {
+        grid-template-columns: 1fr;
+    }
+
+    .banner .block-1 {
+        grid-column: span 12;
+        grid-row: span 2;
+    }
+
+    .banner .block-2,
+    .banner .block-3 {
+        grid-column: span 12;
+        grid-row: span 1;
+    }
+}

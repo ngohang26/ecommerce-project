@@ -1,0 +1,146 @@
+.header {
+    max-width: 1600px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    align-items: center;
+    border-bottom: 1px solid #f7f7f7;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header h1 {
+    font-family: "Nunito", sans-serif;
+    color: #222222;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header .leftSide {
+    display: flex;
+    flex: 2;
+    padding-left: 10px;
+}
+
+.header .leftSide img {
+    padding-right: 50px;
+    margin: 0 10px;
+}
+
+.header .centerSide {
+    text-align: center;
+    flex: 3;
+}
+
+.header .rightSide {
+    display: flex;
+    flex: 5;
+    padding-right: 12px;
+    padding-left: 12px;
+    align-items: center;
+    margin: 10px;
+}
+
+.header .rightSide .cart {
+    display: flex;
+    flex: 4;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    min-width: 140px;
+}
+
+.header .rightSide .cart-icon {
+    cursor: pointer;
+    margin: 0 3rem;
+}
+.header .rightSide .support-box {
+    flex: 3;
+    text-align: right !important;
+    letter-spacing: 0.03em;
+    font-family: "Open Sans", sans-serif;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.header .rightSide .form-account {
+    display: flex;
+    flex: 3;
+    margin: 1rem;
+}
+
+.header .rightSide .form-account .form-user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    cursor: pointer;
+    /*center*/
+}
+
+.header .rightSide .heart, .header .rightSide .user{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: #dfdfdf;
+    border-radius: 50%;
+    margin: 0 20px 0 5px;
+    font-size: 28px;
+    cursor: pointer;
+}
+/* 
+.header .rightSide .heart {
+    padding-right: 40px;
+} */
+
+.header .rightSide .form-account .sign-in {
+    display: flex;
+    white-space: nowrap;
+    padding: 0 10px 0 30px;
+}
+
+.header .rightSide .form-account .sign-in .item {
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.header .rightSide .form-user .username {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.header .rightSide .form-user .showMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(110, 17, 172, 0.1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 13rem;
+    /* right: inherit; */
+}
+
+.header .rightSide .form-user .showMenu .item {
+    height: 100%;
+
+    color: black;
+    /* padding: 0px 10px; */
+    padding: 20px 16px;
+    border-bottom: 1px solid #f2f2f2;
+    margin: 0;
+}
+
+.header .rightSide .form-user .showMenu .item:hover {
+    background-color: #f2f2f2;
+}
+
