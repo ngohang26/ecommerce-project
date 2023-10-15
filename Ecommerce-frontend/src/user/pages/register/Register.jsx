@@ -61,8 +61,8 @@ const Register = ({ onClose }) => {
             <Input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder='Last name' />
           </div>
           <div className="other-form">
-            <Input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='Phone number' />
-            <Input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' />
+            <Input type="number" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='Phone number' />
+            <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' />
             <Input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder='Username' />
             <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password' />
           </div>

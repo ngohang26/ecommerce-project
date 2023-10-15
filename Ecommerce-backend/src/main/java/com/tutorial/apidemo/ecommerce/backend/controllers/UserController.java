@@ -42,6 +42,12 @@ public class UserController {
     @PostMapping(path = "/login")
     public ResponseEntity<?> loginUser(@RequestBody LoginDto loginDto) {
         LoginResponse loginResponse = userService.loginUser(loginDto);
+        if (loginResponse != null) {
+            User user = userService.getUserByToken(loginResponse.getToken());
+            if (user != null) {
+                loginResponse.setUserId(user.getId());
+            }
+        }
         return ResponseEntity.ok(loginResponse);
     }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-const Footer = () => {
+const FooterAdmin = () => {
   return (
     <div className='footer'>
       <span>footmartadmin</span>
@@ -9,4 +9,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default FooterAdmin

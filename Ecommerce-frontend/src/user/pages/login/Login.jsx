@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useCallback} from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Input } from "semantic-ui-react";
 import {GrClose} from 'react-icons/gr'  
 import '../../styles/global-ui.css'
@@ -11,7 +11,7 @@ const Login = ({onClose, onLoginSuccess}) => {
   const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
-
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
   
@@ -24,12 +24,14 @@ const Login = ({onClose, onLoginSuccess}) => {
       // Xử lý phản hồi từ phía backend
       // Ví dụ: chuyển hướng người dùng tới trang thích hợp
       if (response.data.role === 'ADMIN') {
-        window.location.href = 'http://localhost:3000';
+        navigate('/');
       } else {
         onLoginSuccess(response.data);
       }
       if(rememberMe) {
         localStorage.setItem('token', response.data.token);
+        localStorage.setItem('userId', response.data.userId);
+
       }
       // Lưu trữ token vào localStorage
     })
@@ -57,7 +59,7 @@ const Login = ({onClose, onLoginSuccess}) => {
         // Xử lý phản hồi từ phía server
         // Ví dụ: chuyển hướng người dùng tới trang thích hợp
         if (response.data.role === 'ADMIN') {
-          window.location.href = 'http://localhost:3000';
+          navigate('/');
         } else {
           onLoginSuccess(response.data);
         }

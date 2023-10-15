@@ -9,7 +9,6 @@ import { BsCreditCard2Back } from 'react-icons/bs';
 import { RiLockPasswordLine } from 'react-icons/ri';
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { Header } from '../../components/header/Header';
-import { Footer } from '../../components/footer/Footer';
 import { Profile } from './Profile';
 import { Address } from './Address';
 import './accountPage.css';
@@ -50,7 +49,6 @@ export const AccountPage = ({ user, setUser }) => {
 
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

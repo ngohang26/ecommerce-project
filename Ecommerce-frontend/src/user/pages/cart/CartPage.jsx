@@ -1,7 +1,7 @@
 import React from 'react'
 import { Cart } from './Cart'
 import { Header } from '../../components/header/Header';
-import { Footer } from '../../components/footer/Footer';
+import Footer from '../../components/footer/Footer';
 
 export const CartPage = ({ user, setUser, cart, setCart, total }) => {
   const saveCart = (cart) => {

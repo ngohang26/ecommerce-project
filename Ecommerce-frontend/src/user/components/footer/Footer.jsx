@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css'
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <div className='footer-container'>
       <div className="footer section-padding">
@@ -78,10 +78,10 @@ export const Footer = () => {
             </div>
             <h4>Contact Us</h4>
             <div className="icon-contact">
-              <a>
+              <a href='/'>
                 <i class='bx bx-location-plus' ></i>Thang Long University, Hanoi
               </a>
-              <a>
+              <a href='/'>
                 <i class='bx bx-envelope' ></i>thanglong@tlu.vn
               </a>
             </div>
@@ -89,7 +89,7 @@ export const Footer = () => {
           <div className="footer-link-item">
             <h4>Subcribe Us</h4>
 
-            <a>Subscribe to our newsletter to get updates about our grand offers.</a>
+            <a href='/'>Subscribe to our newsletter to get updates about our grand offers.</a>
             <form action="#">
               <input type="email" placeholder="Enter your email" />
               <button type="submit">Subscribe</button>
@@ -100,4 +100,5 @@ export const Footer = () => {
     </div>
   );
 }
+export default Footer;
 

@@ -15,6 +15,7 @@ import Register from './user/pages/register/Register';
 import { CartPage } from './user/pages/cart/CartPage';
 import { CheckOut } from './user/pages/checkout/CheckOut';
 import { AccountPage } from './user/pages/account/AccountPage';
+import { CheckOutPage } from './user/pages/checkout/CheckOutPage';
 
 const queryClient = new QueryClient();
 
@@ -24,10 +25,10 @@ function App() {
     (acc, product) => acc + (product.selected ? product.price * product.quantity : 0),
     0
   );
+  const [user, setUser] = useState(null);
   // const handleUpdateCart = (newCart) => {
   //   setCart(newCart);
   // };
-  const [user, setUser] = useState(null);
 
   const Layout = () => {
     return (
@@ -93,7 +94,7 @@ function App() {
     },
     {
       path: "/checkout",
-      element: <CheckOut cart={cart} total={total} />
+      element: <CheckOutPage cart={cart} total={total} />
     },
     {
       path: "/account",

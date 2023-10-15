@@ -38,9 +38,7 @@ public class AddressController {
         // tra ve ma thanh cong 201 Created
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(address.getId()).toUri();
         return ResponseEntity.created(location).build();
-    }
-
-
+    }       
 
     @GetMapping("/{userId}/addresses")
     public ResponseEntity<List<Address>> getAddresses(@PathVariable Long userId) {

@@ -47,7 +47,7 @@ export const Header = ({user, setUser}) => {
 
   const handleLogOut = () => {
     localStorage.removeItem('token');
-    window.location.href = 'http://localhost:3000/home';
+    navigate('/');
 
   }
 
@@ -68,7 +68,7 @@ export const Header = ({user, setUser}) => {
   }
 
   const handleLogoClick = () => {
-    window.location.href = 'http://localhost:3000/home';
+    navigate('/');
   }
 
   return (
