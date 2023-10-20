@@ -79,7 +79,7 @@ export const Header = ({user, setUser}) => {
       <div className='centerSide'>
         <div className="search-bar-container">
           <SearchBar setResults={setResults} />
-          {results && results.length > 0 && <SearchResultsList results={results} />}
+          {results && results.length > 0 && <SearchResultsList results={results} setResults={setResults}/>}
         </div>
       </div>
       <div className='rightSide'>
