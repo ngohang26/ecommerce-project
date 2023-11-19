@@ -16,7 +16,7 @@ import { CartPage } from './user/pages/cart/CartPage';
 import { CheckOut } from './user/pages/checkout/CheckOut';
 import { AccountPage } from './user/pages/account/AccountPage';
 import { CheckOutPage } from './user/pages/checkout/CheckOutPage';
-
+import {Order} from './user/pages/order/Order'
 const queryClient = new QueryClient();
 
 function App() {
@@ -99,6 +99,10 @@ function App() {
     {
       path: "/account",
       element: <AccountPage user={user} setUser={setUser} />
+    },
+    {
+      path: "/user/order",
+      element: <Order user={user} setUser={setUser} />
     },
 
 

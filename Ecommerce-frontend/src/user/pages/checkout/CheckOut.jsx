@@ -3,11 +3,12 @@ import { Box, Button, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import axios from 'axios';
 import './checkOut.css'
+import { useNavigate } from 'react-router-dom';
 
 export const CheckOut = ({ cart, onCheckout, total }) => {
   const selectedProducts = cart.filter((product) => product.selected);
   const [addresses, setAddresses] = useState([]);
-
+  const navigate = useNavigate();
   const summaryItems = [
     { label: 'Subtotal', value: `$${total.toFixed(2)}` },
     { label: 'Shipping fee', value: 'FREE' },
@@ -72,7 +73,7 @@ export const CheckOut = ({ cart, onCheckout, total }) => {
         }
       })
       .then(function (response) {
-        alert('Đơn hàng đã được đặt thành công!');
+        navigate('/user/order');
       })
       .catch(function (error) {
         alert('Có lỗi xảy ra khi đặt đơn hàng');
