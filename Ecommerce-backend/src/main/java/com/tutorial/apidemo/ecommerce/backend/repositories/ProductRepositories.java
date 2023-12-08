@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
+
 @EnableJpaRepositories
 @Repository
 public interface ProductRepositories extends JpaRepository<Product, Long > {
@@ -14,4 +16,6 @@ public interface ProductRepositories extends JpaRepository<Product, Long > {
     List<Product> findByProductNameContaining(String keyword);
 
     List<Product> findByIsDeletedFalse();
+
+    Optional<Product> findById(Long id);
 }

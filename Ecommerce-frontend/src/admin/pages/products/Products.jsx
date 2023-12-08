@@ -11,10 +11,11 @@ const productColumns = [
     headerName: 'Price',
     valueFormatter: ({ value }) => value.toLocaleString('en-US', { style: 'currency', currency: 'USD' }), type: "decimal"
   },
-  { field: 'image', headerName: 'Image', type: "string" },
+  { field: 'thumbnail', headerName: 'Main Image', type: "string" },
   { field: 'category', headerName: 'Category', type: "string" },
   { field: 'sold', headerName: 'Sold', type: "int" },
   { field: 'rating', headerName: 'Rating', type: "float" },
+  { field: 'images', headerName: 'Image Detail', type: "string"},
 ];
 
 async function fetchProducts() {

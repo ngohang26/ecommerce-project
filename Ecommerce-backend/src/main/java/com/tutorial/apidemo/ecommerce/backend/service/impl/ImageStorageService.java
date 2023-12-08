@@ -1,14 +1,11 @@
 package com.tutorial.apidemo.ecommerce.backend.service.impl;
 
 import com.tutorial.apidemo.ecommerce.backend.service.IStorageService;
-import com.tutorial.apidemo.ecommerce.backend.service.ProductService;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StreamUtils;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -41,7 +38,6 @@ public class ImageStorageService implements IStorageService {
     @Override
     public String storeFile(MultipartFile file) {
         try {
-            System.out.println("Hello");
             if (file.isEmpty()) {
                 throw new RuntimeException("Failed to store empty file.");
             }

@@ -17,6 +17,7 @@ import { CheckOut } from './user/pages/checkout/CheckOut';
 import { AccountPage } from './user/pages/account/AccountPage';
 import { CheckOutPage } from './user/pages/checkout/CheckOutPage';
 import {Order} from './user/pages/order/Order'
+import { ProductDetail } from './user/pages/productDetail/ProductDetail';
 const queryClient = new QueryClient();
 
 function App() {
@@ -71,7 +72,7 @@ function App() {
           element: <User />
         },
         {
-          path: "products/:id",
+          path: "/products/:id",
           element: <Product />
         }
       ],
@@ -104,7 +105,10 @@ function App() {
       path: "/user/order",
       element: <Order user={user} setUser={setUser} />
     },
-
+    {
+      path: "/productsdl/:productId",
+      element: <ProductDetail user={user} setUser={setUser} cart={cart} />
+    },
 
   ])
   return <RouterProvider router={router} />

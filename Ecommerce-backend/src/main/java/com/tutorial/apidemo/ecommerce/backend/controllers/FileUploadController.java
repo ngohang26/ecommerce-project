@@ -1,7 +1,5 @@
 package com.tutorial.apidemo.ecommerce.backend.controllers;
 
-
-import ch.qos.logback.core.encoder.EchoEncoder;
 import com.tutorial.apidemo.ecommerce.backend.response.ProductResponse;
 import com.tutorial.apidemo.ecommerce.backend.service.IStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,32 +10,52 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
-
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping(path = "/api/FileUpload")
 public class FileUploadController {
-    // inject strorage service here
+    // inject storage service here
     @Autowired
     private IStorageService storageService;
     // this controller receive file/ image from client
-    @PostMapping("") // search
+    @PostMapping("/uploadFile") // search
     public ResponseEntity<ProductResponse> uploadFile(@RequestParam("file")MultipartFile file) {
         try {
             // save files to a folder => use a service
             String generatedFileName = storageService.storeFile(file);
             return ResponseEntity.status(HttpStatus.OK).body(
-                new ProductResponse("ok", "upload successfully", generatedFileName)
+                    new ProductResponse("ok", "upload successfully", generatedFileName)
 
             );
         } catch (Exception exception) {
             return  ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).body (
-                new ProductResponse("ok", exception.getMessage(), "")
+                    new ProductResponse("ok", exception.getMessage(), "")
             );
         }
     }
+
+    @PostMapping("/uploadMultipleFiles")
+    public ResponseEntity<ProductResponse> uploadMultipleFiles(@RequestParam("files") MultipartFile[] files) {
+        try {
+            List<String> fileNames = new ArrayList<>();
+            for (MultipartFile file : files) {
+                String generatedFileName = storageService.storeFile(file);
+                fileNames.add(generatedFileName);
+            }
+            return ResponseEntity.status(HttpStatus.OK).body(
+                    new ProductResponse("ok", "upload successfully", fileNames)
+            );
+        } catch (Exception exception) {
+            return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).body (
+                    new ProductResponse("failed", exception.getMessage(), new ArrayList<>())
+            );
+        }
+    }
+
+
     @GetMapping("/files/{fileName:.+}")
     public ResponseEntity<byte[]> readDetailFile(@PathVariable String fileName) {
         try {
@@ -60,7 +78,7 @@ public class FileUploadController {
                         //convert fileName to url ( send request "readDetailFile)
                         String urlsPath = MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
                                 "readDetailFile", path.getFileName().toString()).build().toUri().toString();
-                                return urlsPath;
+                        return urlsPath;
                     })
                     .collect(Collectors.toList());
             return ResponseEntity.ok(new ProductResponse("ok", "List files successfully", urls));

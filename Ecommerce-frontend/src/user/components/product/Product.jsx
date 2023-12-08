@@ -64,13 +64,13 @@ export const Product = ({ cart, setCart }) => {
   }, []);
 
   // image:
-  const getImageUrl = (image) => {
-    if (image.startsWith('http')) {
+  const getImageUrl = (thumbnail) => {
+    if (thumbnail.startsWith('http')) {
       // If the image is an absolute URL, return it as is
-      return image;
+      return thumbnail;
     } else {
       // If the image is a relative path, prepend the API URL
-      return `${API_URL}/api/FileUpload/files/${image}`;
+      return `${API_URL}/api/FileUpload/files/${thumbnail}`;
     }
   }
 
@@ -225,7 +225,7 @@ export const Product = ({ cart, setCart }) => {
                   <i class='bx bx-heart' ></i>
                 </div>
                 <div className='product-image'>
-                  <img src={getImageUrl(product.image)} alt={product.productName} />
+                  <img src={getImageUrl(product.thumbnail)} alt={product.productName} />
                 </div>
 
                 <h3>{product.productName}</h3>
